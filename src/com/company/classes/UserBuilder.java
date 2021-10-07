@@ -14,7 +14,7 @@ public class UserBuilder implements UserBuilderInterface {
 
     @Override
     public UserBuilder addFirstName(String firstName) {
-        this.user.setFirstName(firstName);
+        user.setFirstName(firstName);
 
         return this;
     }

@@ -49,6 +49,10 @@ public class User {
 
     @Override
     public String toString() {
+        while (this.reason != null) {
+            return this.firstName + ", " + this.lastName + ", " + this.age + ", " + this.reason;
+        }
+
         return this.firstName + ", " + this.lastName + ", " + this.age + ", " + this.identificationNumber;
     }
 }
