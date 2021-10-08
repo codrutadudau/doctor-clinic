@@ -4,8 +4,6 @@ public class User {
     private String firstName;
     private String lastName;
     private int age;
-    private int identificationNumber;
-    private String reason;
 
     public String getFirstName() {
         return firstName;
@@ -31,28 +29,8 @@ public class User {
         this.age = age;
     }
 
-    public int getIdentificationNumber() {
-        return identificationNumber;
-    }
-
-    public void setIdentificationNumber(int identificationNumber) {
-        this.identificationNumber = identificationNumber;
-    }
-
-    public String getReason() {
-        return reason;
-    }
-
-    public void setReason(String reason) {
-        this.reason = reason;
-    }
-
     @Override
     public String toString() {
-        while (this.reason != null) {
-            return this.firstName + ", " + this.lastName + ", " + this.age + ", " + this.reason;
-        }
-
-        return this.firstName + ", " + this.lastName + ", " + this.age + ", " + this.identificationNumber;
+        return this.firstName + ", " + this.lastName + ", " + this.age;
     }
 }

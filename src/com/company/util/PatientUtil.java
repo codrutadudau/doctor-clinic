@@ -43,8 +43,8 @@ public class PatientUtil {
     }
 
     public String generateReason() {
-        int randomNumber = (new Random()).nextInt(PatientConstants.REASONS.length);
+        int randomString = (new Random()).nextInt(PatientConstants.REASONS.length);
 
-        return PatientConstants.REASONS[randomNumber];
+        return PatientConstants.REASONS[randomString];
     }
 }

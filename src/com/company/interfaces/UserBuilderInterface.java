@@ -1,20 +1,13 @@
 package com.company.interfaces;
 
 import com.company.classes.User;
-import com.company.classes.UserBuilder;
 
 public interface UserBuilderInterface {
-    UserBuilder createUser();
+    void createUser();
 
-    UserBuilder addFirstName(String firstName);
+    void addFirstName(String firstName);
 
-    UserBuilder addLastName(String firstName);
+    void addLastName(String lastName);
 
-    UserBuilder addAge(int age);
-
-    UserBuilder addIdentificationNumber(int identificationNumber);
-
-    UserBuilder addReason(String reason);
-
-    User getUser();
+    void addAge(int age);
 }
