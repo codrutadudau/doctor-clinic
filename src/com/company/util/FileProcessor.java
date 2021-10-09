@@ -1,25 +1,25 @@
 package com.company.util;
 
 import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Map;
 
 public class FileProcessor {
-    public Map<?, ?> readDataFromFile(String path) throws IOException {
-        Gson gson = new Gson();
-        Reader reader = Files.newBufferedReader(Paths.get(path));
-        Map<?, ?> map = gson.fromJson(reader, Map.class);
-        reader.close();
+    public JsonReader readDataFromFile(String path) throws IOException {
+        JsonReader reader = new JsonReader(new FileReader(path));
 
-        return map;
+        return reader;
     }
 
     public void writeDataToFile(String data, String path) throws IOException {
-        FileWriter fileWriter = new FileWriter(path);
-        fileWriter.write(data);
-        fileWriter.close();
+        try {
+            FileWriter fileWriter = new FileWriter(path);
+            fileWriter.write(data);
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
