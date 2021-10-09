@@ -1,6 +1,6 @@
 package com.company.util;
 
-import com.company.constants.PatientConstants;
+import com.company.constants.PatientConsts;
 
 import java.util.Locale;
 import java.util.Random;
@@ -9,7 +9,7 @@ public class PatientUtil {
     public String generateFirstName() {
         int leftLimit = 97;
         int rightLimit = 122;
-        int targetStringLength = PatientConstants.FIRST_NAME_LENGTH;
+        int targetStringLength = PatientConsts.FIRST_NAME_LENGTH;
         Random random = new Random();
         StringBuilder stringBuilder = new StringBuilder(targetStringLength);
         for (int i = 0; i < targetStringLength; i++) {
@@ -24,7 +24,7 @@ public class PatientUtil {
     public String generateLastName() {
         int leftLimit = 97;
         int rightLimit = 122;
-        int targetStringLength = PatientConstants.LAST_NAME_LENGTH;
+        int targetStringLength = PatientConsts.LAST_NAME_LENGTH;
         Random random = new Random();
         StringBuilder stringBuilder = new StringBuilder(targetStringLength);
         for (int i = 0; i < targetStringLength; i++) {
@@ -39,12 +39,13 @@ public class PatientUtil {
     public int generateAge() {
         Random random = new Random();
 
-        return random.nextInt((PatientConstants.MAX_AGE_THRESHOLD - PatientConstants.MIN_AGE_THRESHOLD) + 1) + PatientConstants.MIN_AGE_THRESHOLD;
+        return random.nextInt((PatientConsts.MAX_AGE_THRESHOLD - PatientConsts.MIN_AGE_THRESHOLD) + 1) + PatientConsts.MIN_AGE_THRESHOLD;
     }
 
     public String generateReason() {
-        int randomString = (new Random()).nextInt(PatientConstants.REASONS.length);
+        String[] reasons = {PatientConsts.CONSULTATION, PatientConsts.TREATMENT, PatientConsts.PRESCRIPTION};
+        int randomString = (new Random()).nextInt(reasons.length);
 
-        return PatientConstants.REASONS[randomString];
+        return reasons[randomString];
     }
 }

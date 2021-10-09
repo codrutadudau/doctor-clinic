@@ -2,10 +2,10 @@ package com.company.interfaces;
 
 import com.company.classes.User;
 
-public interface IteratorInterface {
+public interface IteratorInterface<E> {
     boolean hasNext();
 
-    User current();
+    E current();
 
     void next();
 }

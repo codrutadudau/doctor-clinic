@@ -1,6 +1,6 @@
 package com.company.constants;
 
-public class DoctorConstants {
+public class DoctorConsts {
     public static final int STAFF_SIZE = 8;
     public static final int FIRST_NAME_LENGTH = 3;
     public static final int LAST_NAME_LENGTH = 2;
