@@ -2,17 +2,16 @@ package com.company.builder;
 
 import com.company.classes.Doctor;
 import com.company.classes.Patient;
-import com.company.classes.User;
 import com.company.util.DoctorUtil;
 import com.company.util.PatientUtil;
 
 import java.util.ArrayList;
 
 public class Director {
-    private DoctorUtil doctorUtil = new DoctorUtil();
-    private PatientUtil patientUtil = new PatientUtil();
+    private final DoctorUtil doctorUtil = new DoctorUtil();
+    private final PatientUtil patientUtil = new PatientUtil();
 
-    public Doctor buildDoctor(DoctorBuilder doctorBuilder, ArrayList identificationNumbersList) {
+    public Doctor buildDoctor(DoctorBuilder doctorBuilder, ArrayList<Integer> identificationNumbersList) {
         int identificationNumber = doctorUtil.generateIdentificationNumber();
         while (identificationNumbersList.contains(identificationNumber)) {
             identificationNumber = doctorUtil.generateIdentificationNumber();

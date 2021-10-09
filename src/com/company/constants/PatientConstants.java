@@ -3,7 +3,7 @@ package com.company.constants;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PatientConsts {
+public class PatientConstants {
     public static final int POOL_SIZE = 100;
     public static final int FIRST_NAME_LENGTH = 5;
     public static final int LAST_NAME_LENGTH = 4;

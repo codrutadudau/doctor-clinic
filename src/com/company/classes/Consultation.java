@@ -1,6 +1,6 @@
 package com.company.classes;
 
-import com.company.constants.PatientConsts;
+import com.company.constants.PatientConstants;
 
 public class Consultation {
     private Patient beneficiary;
@@ -29,7 +29,7 @@ public class Consultation {
             return 0;
         }
 
-        return PatientConsts.getReasonParams(this.getBeneficiary().getReason()).get("duration");
+        return PatientConstants.getReasonParams(this.getBeneficiary().getReason()).get("duration");
     }
 
     public void setDuration(int duration) {
@@ -41,7 +41,7 @@ public class Consultation {
             return 0;
         }
 
-        return PatientConsts.getReasonParams(this.getBeneficiary().getReason()).get("fee");
+        return PatientConstants.getReasonParams(this.getBeneficiary().getReason()).get("fee");
     }
 
     public void setFee(int fee) {

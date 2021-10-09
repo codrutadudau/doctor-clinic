@@ -4,10 +4,11 @@ import com.company.classes.Patient;
 import com.company.interfaces.UserListInterface;
 import com.company.iterator.PatientIterator;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PatientList implements UserListInterface<Patient, PatientIterator> {
+public class PatientList implements UserListInterface<Patient, PatientIterator>, Serializable {
     private List<Patient> patientList;
 
     public PatientList() {

@@ -1,6 +1,6 @@
 package com.company.util;
 
-import com.company.constants.DoctorConsts;
+import com.company.constants.DoctorConstants;
 
 import java.util.Locale;
 import java.util.Random;
@@ -9,7 +9,7 @@ public class DoctorUtil {
     public String generateFirstName() {
         int leftLimit = 97;
         int rightLimit = 122;
-        int targetStringLength = DoctorConsts.FIRST_NAME_LENGTH;
+        int targetStringLength = DoctorConstants.FIRST_NAME_LENGTH;
         Random random = new Random();
         StringBuilder stringBuilder = new StringBuilder(targetStringLength);
         for (int i = 0; i < targetStringLength; i++) {
@@ -24,7 +24,7 @@ public class DoctorUtil {
     public String generateLastName() {
         int leftLimit = 97;
         int rightLimit = 122;
-        int targetStringLength = DoctorConsts.LAST_NAME_LENGTH;
+        int targetStringLength = DoctorConstants.LAST_NAME_LENGTH;
         Random random = new Random();
         StringBuilder stringBuilder = new StringBuilder(targetStringLength);
         for (int i = 0; i < targetStringLength; i++) {
@@ -39,12 +39,12 @@ public class DoctorUtil {
     public int generateAge() {
         Random random = new Random();
 
-        return random.nextInt((DoctorConsts.MAX_AGE_THRESHOLD - DoctorConsts.MIN_AGE_THRESHOLD) + 1) + DoctorConsts.MIN_AGE_THRESHOLD;
+        return random.nextInt((DoctorConstants.MAX_AGE_THRESHOLD - DoctorConstants.MIN_AGE_THRESHOLD) + 1) + DoctorConstants.MIN_AGE_THRESHOLD;
     }
 
     public int generateIdentificationNumber() {
         Random random = new Random();
 
-        return random.nextInt((DoctorConsts.MAX_IDENTIFICATION_NUMBER - DoctorConsts.MIN_IDENTIFICATION_NUMBER) + 1) + DoctorConsts.MIN_IDENTIFICATION_NUMBER;
+        return random.nextInt((DoctorConstants.MAX_IDENTIFICATION_NUMBER - DoctorConstants.MIN_IDENTIFICATION_NUMBER) + 1) + DoctorConstants.MIN_IDENTIFICATION_NUMBER;
     }
 }

@@ -37,5 +37,4 @@ public class DoctorBuilder implements DoctorBuilderInterface, UserBuilderInterfa
     public void addAge(int age) {
         this.doctor.setAge(age);
     }
-
 }

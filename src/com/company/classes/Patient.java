@@ -1,6 +1,6 @@
 package com.company.classes;
 
-import com.company.constants.PatientConsts;
+import com.company.constants.PatientConstants;
 
 public class Patient extends User {
     private String reason;
@@ -15,14 +15,14 @@ public class Patient extends User {
 
     public String getAgeCategory() {
         int age = this.getAge();
-        if (age > PatientConsts.STUDENT_MAX_AGE_THRESHOLD) {
-            return PatientConsts.ADULT;
-        } else if (age <= PatientConsts.STUDENT_MAX_AGE_THRESHOLD && age > PatientConsts.PUPIL_MAX_AGE_THRESHOLD) {
-            return PatientConsts.STUDENT;
-        } else if (age <= PatientConsts.PUPIL_MAX_AGE_THRESHOLD && age > PatientConsts.CHILDREN_MAX_AGE_THRESHOLD) {
-            return PatientConsts.PUPIL;
+        if (age > PatientConstants.STUDENT_MAX_AGE_THRESHOLD) {
+            return PatientConstants.ADULT;
+        } else if (age > PatientConstants.PUPIL_MAX_AGE_THRESHOLD) {
+            return PatientConstants.STUDENT;
+        } else if (age > PatientConstants.CHILDREN_MAX_AGE_THRESHOLD) {
+            return PatientConstants.PUPIL;
         } else {
-            return PatientConsts.CHILDREN;
+            return PatientConstants.CHILDREN;
         }
     }
 
