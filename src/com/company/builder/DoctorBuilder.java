@@ -5,7 +5,6 @@ import com.company.interfaces.DoctorBuilderInterface;
 import com.company.interfaces.UserBuilderInterface;
 
 public class DoctorBuilder implements DoctorBuilderInterface, UserBuilderInterface {
-
     private Doctor doctor;
 
     @Override

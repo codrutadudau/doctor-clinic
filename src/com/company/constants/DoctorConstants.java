@@ -8,4 +8,5 @@ public class DoctorConstants {
     public static final int MAX_AGE_THRESHOLD = 65;
     public static final int MIN_IDENTIFICATION_NUMBER = 1000;
     public static final int MAX_IDENTIFICATION_NUMBER = 9999;
+    public static final int DAILY_SHIFT_LENGTH_IN_HOURS = 7;
 }

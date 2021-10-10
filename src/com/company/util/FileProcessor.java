@@ -1,6 +1,5 @@
 package com.company.util;
 
-import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
 import java.io.*;
@@ -21,5 +20,11 @@ public class FileProcessor {
             e.printStackTrace();
         }
 
+    }
+
+    public boolean exists(String path) {
+        File tempFile = new File(path);
+
+        return tempFile.exists();
     }
 }

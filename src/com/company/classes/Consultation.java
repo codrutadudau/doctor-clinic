@@ -7,6 +7,7 @@ public class Consultation {
     private Doctor consultant;
     private int duration;
     private int fee;
+    private String room;
 
     public Patient getBeneficiary() {
         return beneficiary;
@@ -46,5 +47,13 @@ public class Consultation {
 
     public void setFee(int fee) {
         this.fee = fee;
+    }
+
+    public String getRoom() {
+        return room;
+    }
+
+    public void setRoom(String room) {
+        this.room = room;
     }
 }

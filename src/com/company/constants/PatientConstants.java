@@ -9,7 +9,6 @@ public class PatientConstants {
     public static final int LAST_NAME_LENGTH = 4;
     public static final int MIN_AGE_THRESHOLD = 0;
     public static final int MAX_AGE_THRESHOLD = 85;
-//    public static final String[] REASONS = {"Consultation", "Treatment", "Prescription"};
     public static final int CHILDREN_MAX_AGE_THRESHOLD = 1;
     public static final int PUPIL_MAX_AGE_THRESHOLD = 7;
     public static final int STUDENT_MAX_AGE_THRESHOLD = 18;
@@ -23,7 +22,7 @@ public class PatientConstants {
     public static final String TREATMENT = "Treatment";
 
     public static Map<String, Integer> getReasonParams(String reason) {
-        Map <String, Integer> reasonParams = new HashMap<>();
+        Map<String, Integer> reasonParams = new HashMap<>();
         int duration;
         int fee;
 
